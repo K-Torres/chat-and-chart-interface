@@ -26,10 +26,10 @@ export const ChartProvider: React.FC<{ children: ReactNode }> = ({
     if (!data || !data.series) return 0;
 
     return data.series.reduce(
-      (sum: number, s: { data: { value: number }[] }) => {
+      (sum: number, seriesData: { data: { value: number }[] }) => {
         return (
           sum +
-          s.data.reduce(
+          seriesData.data.reduce(
             (subSum: number, item: { value: number }) => subSum + item.value,
             0
           )
