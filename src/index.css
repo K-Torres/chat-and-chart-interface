@@ -1,5 +1,4 @@
 :root {
-  font-family: 'Poppins';
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
@@ -14,6 +13,7 @@
 
 body {
   margin: 0;
+  font-family: "Poppins", sans-serif !important;
   display: flex;
   place-items: center;
   min-width: 320px;
