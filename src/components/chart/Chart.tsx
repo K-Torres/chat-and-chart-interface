@@ -30,10 +30,10 @@ const Chart: React.FC = () => {
         grid: { left: "2%", right: "2%", containLabel: true },
         xAxis: { type: "category", data: xAxisData },
         yAxis: { type: "value", name: "Total" },
-        series: chartData.series.map((s, index) => ({
-          name: s.name === "ecomm_sales" ? "E-commerce" : "Wholesale",
+        series: chartData.series.map((seriesData, index) => ({
+          name: seriesData.name === "ecomm_sales" ? "E-commerce" : "Wholesale",
           type: "bar",
-          data: s.data.map((item) => ({
+          data: seriesData.data.map((item) => ({
             value: item.value,
             itemStyle: {
               color: index === 0 ? "#5A8CFE" : "#CC72E9",

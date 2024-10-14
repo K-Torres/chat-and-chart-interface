@@ -1,4 +1,3 @@
-// src/context/ChatContext.tsx
 import React, { createContext, useState } from "react";
 import { getRandomText } from "@/services/api";
 

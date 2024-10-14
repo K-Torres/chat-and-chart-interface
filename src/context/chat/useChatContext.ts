@@ -1,7 +1,6 @@
-// src/context/useChatContext.ts
 import { useContext } from "react";
-import { ChatContext } from "./ChatContext"; // Adjust the import based on your file structure
-import { ChatContextType } from "./ChatContext"; // Import the ChatContextType interface
+import { ChatContext } from "./ChatContext";
+import { ChatContextType } from "./ChatContext";
 
 export const useChatContext = (): ChatContextType => {
   const context = useContext(ChatContext);

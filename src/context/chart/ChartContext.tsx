@@ -1,4 +1,3 @@
-// src/context/ChartContext.tsx
 import React, { createContext, ReactNode, useState } from "react";
 import { ChartData } from "@/interfaces/charData";
 import { getChartData } from "@/services/api";
