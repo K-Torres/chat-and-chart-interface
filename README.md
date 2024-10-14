@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+# Pharus Front-end Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a chat interface and a data visualization chart according to the specified design and guidelines. The application is designed to be responsive and uses the following technologies:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js
+- MUI (Material-UI)
+- Context API
+- Hooks
+- Axios
+- Apache ECharts
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Task 1: Chat Interface
 
-- Configure the top-level `parserOptions` property like this:
+- A chat interface located on the right side of the view.
+- Auto-populates a response using a random text generator API for each sent message.
+- The chat can be collapsed by clicking the "X" in the top right corner.
+- A purple button in the bottom right shows the chat when clicked.
+- Chat history is saved in the session, containing:
+  - Message
+  - User who sent the message
+  - Timestamp
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Task 2: Double Vertical Bar Chart
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Displays data fetched from an API using a double vertical bar chart.
+- Tooltip shows data for each bar on hover, reducing the transparency of other bars to highlight the hovered bar.
+- A large number at the top represents the total revenue from all periods combined.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Additional Features
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Two contexts are created for managing chat and chart states.
+- Effective state management using React Hooks.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm should be installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd <project-name>
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Running the Project
+
+1. Run the project:
+   ```bash
+   npm run dev
+   ```

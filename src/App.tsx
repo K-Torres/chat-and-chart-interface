@@ -1,27 +1,19 @@
+import MainProvider from "./context/MainProvider";
+import { Box, Container } from "@mui/material";
 import React from "react";
-import "./App.css";
-import Chat from "./components/Chat";
-import Chart from "./components/Chart";
-import { Container, Box } from "@mui/material";
-import { ChartProvider } from "./context/ChartContext";
-import { ChatProvider } from "./context/ChatContext";
+import Chart from "./components/chart/Chart";
+import Chat from "./components/chat/ChatContainer";
 
 const App: React.FC = () => {
   return (
     <Container>
-      <Box
-        display="flex"
-        justifyContent="space-between"
-        sx={{ width: "100%", height: "100vh" }}
-      >
-        <ChartProvider>
-          <Box flex={1}>
+      <Box display="flex" sx={{ width: "100%", height: "100vh" }}>
+        <MainProvider>
+          <Box flex={3}>
             <Chart />
           </Box>
-        </ChartProvider>
-        <ChatProvider>
           <Chat />
-        </ChatProvider>
+        </MainProvider>
       </Box>
     </Container>
   );
